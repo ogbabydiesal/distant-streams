@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "PUBLIC=www DEBUG=signaling-server: node ./scripts/start-server",
+    "start": "PUBLIC=client DEBUG=signaling-server: node ./scripts/start-server",
     "start:demos": "PUBLIC=client DEBUG=signaling-server: node ./scripts/start-server",
     "ssl-keys": "openssl req -x509 -out $npm_config_keydir/localhost.crt -keyout $npm_config_keydir/localhost.key -newkey rsa:2048 -nodes -sha256 -days $npm_config_numdays -subj '/CN=localhost' -extensions EXT -config scripts/conf/self-signed.conf"
   },
