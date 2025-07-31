@@ -1,0 +1,28 @@
+{
+  "name": "distant-streams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:demos": "PUBLIC=client DEBUG=signaling-server: node ./scripts/start-server",
+    "ssl-keys": "openssl req -x509 -out $npm_config_keydir/localhost.crt -keyout $npm_config_keydir/localhost.key -newkey rsa:2048 -nodes -sha256 -days $npm_config_numdays -subj '/CN=localhost' -extensions EXT -config scripts/conf/self-signed.conf"
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "http-errors": "^2.0",
+    "morgan": "^1.10",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "chromedriver": "^122.0.4",
+    "eslint": "^8.4.0",
+    "geckodriver": "^3.0",
+    "htmllint-cli": "^0.0.7",
+    "nightwatch": "^2.0",
+    "stylelint": "^16.2.1"
+  },
+  "author": "tommy",
+  "license": "ISC"
+}
